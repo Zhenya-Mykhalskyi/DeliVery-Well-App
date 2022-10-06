@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/meal_detail_screen.dart';
 import 'screens/category_meals_screen.dart';
 import 'screens/categories_screen.dart';
 
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
         //   bodyColor: Colors.pinkAccent, //<-- SEE HERE
         //   displayColor: Colors.pinkAccent, //<-- SEE HERE
         // ),
-        primarySwatch: Colors.amber,
-        accentColor: Colors.amber,
+        primarySwatch: Colors.pink,
+        accentColor: Colors.pink,
         canvasColor: Color.fromARGB(255, 15, 1, 15),
 
         fontFamily: 'Raleway',
@@ -30,7 +31,12 @@ class MyApp extends StatelessWidget {
                 color: Color.fromARGB(255, 235, 235, 235),
               ),
               headline3: TextStyle(
-                fontSize: 15,
+                fontSize: 16,
+                fontFamily: 'RobotoCondensed',
+                color: Color.fromARGB(255, 235, 235, 235),
+              ),
+              headline4: TextStyle(
+                fontSize: 18,
                 fontFamily: 'RobotoCondensed',
                 color: Color.fromARGB(255, 235, 235, 235),
               ),
@@ -41,6 +47,15 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => CategoriesScreen(),
         CategoryMealScreen.routeName: (ctx) => CategoryMealScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+      },
+      onGenerateRoute: (settings) {
+        print(settings.arguments);
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+      },
+      onUnknownRoute: (settings) {
+        print(settings.arguments);
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
       },
     );
   }
