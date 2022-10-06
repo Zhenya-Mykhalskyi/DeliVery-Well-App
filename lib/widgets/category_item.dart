@@ -36,16 +36,17 @@ class CategoryItem extends StatelessWidget {
           gradient: LinearGradient(
             colors: <Color>[
               color,
-              color,
-              color,
-              color.withBlue(100),
-              Colors.black,
+              color.withBlue(150),
             ],
-            begin: Alignment(1.26, 1),
+            begin: Alignment(8, 1.3),
 
             // end: Alignment.bottomCenter,
           ),
           borderRadius: BorderRadius.circular(15),
+          border: Border.all(
+            color: Color.fromARGB(255, 209, 209, 209),
+            width: 1.5,
+          ),
         ),
       ),
     );

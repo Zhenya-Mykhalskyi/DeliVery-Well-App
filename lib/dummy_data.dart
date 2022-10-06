@@ -7,52 +7,52 @@ const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
     title: 'Italian',
-    color: Color.fromARGB(255, 1, 119, 29),
+    color: Color.fromARGB(215, 255, 181, 107),
   ),
   Category(
     id: 'c2',
     title: 'Quick & Easy',
-    color: Color.fromARGB(255, 226, 197, 31),
+    color: Color(0xfff39060),
   ),
   Category(
     id: 'c3',
     title: 'Hamburgers',
-    color: Color.fromARGB(255, 228, 137, 0),
+    color: Color(0xffe16b5c),
   ),
   Category(
     id: 'c4',
     title: 'German',
-    color: Color.fromARGB(255, 210, 35, 35),
+    color: Color(0xffca485c),
   ),
   Category(
     id: 'c5',
     title: 'Light & Lovely',
-    color: Color.fromARGB(255, 0, 107, 195),
+    color: Color(0xffac255e),
   ),
   Category(
     id: 'c6',
     title: 'Exotic',
-    color: Color.fromARGB(255, 13, 153, 104),
+    color: Color(0xff870160),
   ),
   Category(
     id: 'c7',
     title: 'Breakfast',
-    color: Color.fromARGB(255, 2, 178, 187),
+    color: Color(0xff5b0060),
   ),
   Category(
     id: 'c8',
     title: 'Asian',
-    color: Color.fromARGB(255, 244, 149, 33),
+    color: Color.fromARGB(255, 62, 0, 96),
   ),
   Category(
     id: 'c9',
     title: 'French',
-    color: Colors.pink,
+    color: Color(0xff1f005c),
   ),
   Category(
     id: 'c10',
     title: 'Summer',
-    color: Color.fromARGB(255, 246, 212, 16),
+    color: Color.fromARGB(255, 41, 0, 35),
   ),
 ];
 
