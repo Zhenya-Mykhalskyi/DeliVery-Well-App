@@ -43,10 +43,10 @@ class CategoryItem extends StatelessWidget {
             // end: Alignment.bottomCenter,
           ),
           borderRadius: BorderRadius.circular(15),
-          border: Border.all(
-            color: Color.fromARGB(255, 209, 209, 209),
-            width: 1.5,
-          ),
+          // border: Border.all(
+          //   color: Color.fromARGB(255, 209, 209, 209),
+          //   width: 1.5,
+          // ),
         ),
       ),
     );
