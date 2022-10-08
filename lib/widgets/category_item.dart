@@ -39,8 +39,6 @@ class CategoryItem extends StatelessWidget {
               color.withBlue(150),
             ],
             begin: Alignment(8, 1.3),
-
-            // end: Alignment.bottomCenter,
           ),
           borderRadius: BorderRadius.circular(15),
           // border: Border.all(

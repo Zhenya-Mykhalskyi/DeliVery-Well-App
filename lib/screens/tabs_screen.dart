@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../widgets/main_drawer.dart';
 import './categories_screen.dart';
 import './favorites_screen.dart';
 
@@ -57,7 +58,7 @@ class _TabsScreenState extends State<TabsScreen> {
             ],
           ),
         ),
-        // drawer: Drawer(),
+        drawer: MainDrawer(),
         body: TabBarView(
           children: [
             CategoriesScreen(),
