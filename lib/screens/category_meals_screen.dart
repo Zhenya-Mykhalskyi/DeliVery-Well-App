@@ -50,13 +50,13 @@ class _CategoryMealScreenState extends State<CategoryMealScreen> {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return MealItem(
-              id: displayedMeals[index].id,
-              title: displayedMeals[index].title,
-              imgUrl: displayedMeals[index].imageUrl,
-              duration: displayedMeals[index].duration,
-              complexity: displayedMeals[index].complexity,
-              affordability: displayedMeals[index].affordability,
-              removeItem: _removeMeal);
+            id: displayedMeals[index].id,
+            title: displayedMeals[index].title,
+            imgUrl: displayedMeals[index].imageUrl,
+            duration: displayedMeals[index].duration,
+            complexity: displayedMeals[index].complexity,
+            affordability: displayedMeals[index].affordability,
+          );
         },
         itemCount: displayedMeals.length,
       ),
