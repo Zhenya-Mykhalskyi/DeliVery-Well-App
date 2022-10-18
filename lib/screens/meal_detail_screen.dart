@@ -41,6 +41,23 @@ class MealDetailScreen extends StatelessWidget {
     final selectedMeal = DUMMY_MEALS.firstWhere((meal) => meal.id == mealId);
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[
+                  Color(0xff1f005c),
+                  Color(0xff5b0060),
+                  Color(0xff870160),
+                  Color(0xffac255e),
+                  Color(0xffca485c),
+                  Color(0xffe16b5c),
+                  Color(0xfff39060),
+                  Color(0xffffb56b),
+                ]),
+          ),
+        ),
         title: Text('${selectedMeal.title}'),
       ),
       body: SingleChildScrollView(
@@ -77,11 +94,26 @@ class MealDetailScreen extends StatelessWidget {
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: Colors.pink,
-                    child: Text(
-                      '# ${(index + 1)}',
-                      style: TextStyle(color: Colors.white),
+                  leading: Container(
+                    padding: EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Color(0xffac255e),
+                          Color(0xffca485c),
+                          Color(0xffe16b5c),
+                          Color(0xfff39060),
+                          Color(0xffffb56b),
+                        ],
+                      ),
+                      shape: BoxShape.circle,
+                    ),
+                    child: CircleAvatar(
+                      backgroundColor: Color.fromARGB(255, 31, 31, 31),
+                      child: Text(
+                        '# ${(index + 1)}',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                   title: Text(
@@ -98,11 +130,18 @@ class MealDetailScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(
-          isFavorite(mealId) ? Icons.star : Icons.star_border,
+      floatingActionButton: SizedBox(
+        height: 55,
+        child: FloatingActionButton(
+          backgroundColor: Color.fromARGB(255, 243, 145, 96),
+          child: Container(
+            child: Icon(
+              isFavorite(mealId) ? Icons.star : Icons.star_border,
+              color: Color.fromARGB(255, 225, 225, 225),
+            ),
+          ),
+          onPressed: () => toggleFavorite(mealId),
         ),
-        onPressed: () => toggleFavorite(mealId),
       ),
     );
   }

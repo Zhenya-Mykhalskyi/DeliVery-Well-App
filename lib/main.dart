@@ -78,8 +78,10 @@ class _MyAppState extends State<MyApp> {
         //   bodyColor: Colors.pinkAccent, //<-- SEE HERE
         //   displayColor: Colors.pinkAccent, //<-- SEE HERE
         // ),
+
         primarySwatch: Colors.pink,
         accentColor: Colors.pink,
+
         canvasColor: Color.fromARGB(255, 15, 1, 15),
 
         fontFamily: 'Raleway',
